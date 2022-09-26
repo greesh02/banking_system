@@ -11,7 +11,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/bankDB");
+// mongoose.connect("mongodb://localhost:27017/bankDB");
+mongoose.connect("mongodb+srv://greesh:greeshwarcluster0.fhm9b.mongodb.net/?retryWrites=true&w=majority");
 const customerSchema = {
     customerID:{
         type:Number,
