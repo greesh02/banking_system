@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 // mongoose.connect("mongodb://localhost:27017/bankDB");
-mongoose.connect("mongodb+srv://greesh:greeshwarcluster0.fhm9b.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect("mongodb+srv://greesh:greeshwar@cluster0.fhm9b.mongodb.net/bankDB?retryWrites=true&w=majority");
 const customerSchema = {
     customerID:{
         type:Number,
