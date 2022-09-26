@@ -1,4 +1,30 @@
 // INSERTING A DOCUMENT
+const mongoose = require('mongoose')
+
+const customerSchema = {
+   customerID:{
+       type:Number,
+       required:true
+   },
+   name:{
+     type:String,
+     required:true
+   },
+   age:{
+       type:Number
+   },
+   email:{
+       type:String
+   },
+   accountBalance:{
+     type:Number,
+     required:true
+   }
+}
+
+const Customer = mongoose.model("Customer",customerSchema);
+
+
 const c1 = new Customer({
     customerID:1,
     name:"Greeshwar",
@@ -69,12 +95,16 @@ const c1 = new Customer({
      email:"Mohan@gmail.com",
      accountBalance:500000
   });
+
+  mongoose.connect("mongodb+srv://greeshwar:greeshwar@cluster0.fhm9b.mongodb.net/bankDB?retryWrites=true&w=majority").then((_) => {
+   Customer.insertMany([c1,c2,c3,c4,c5,c6,c7,c8,c9,c10],function(err){
+      if(err){
+          console.log(err);
+      }
+      else{
+          console.log("Successfull saved");
+      }
+  });
+  })
  
-  Customer.insertMany([c1,c2,c3,c4,c5,c6,c7,c8,c9,c10],function(err){
-     if(err){
-         console.log(err);
-     }
-     else{
-         console.log("Successfull saved");
-     }
- });
+ 

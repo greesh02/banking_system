@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(express.static("public"));
+app.use(express.static(__dirname+"public"));
 
 // mongoose.connect("mongodb://localhost:27017/bankDB");
 mongoose.connect("mongodb+srv://greesh:greeshwar@cluster0.fhm9b.mongodb.net/bankDB?retryWrites=true&w=majority");
