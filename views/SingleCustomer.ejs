@@ -1,0 +1,45 @@
+<%- include('partials/header'); -%>
+
+<div class="container align1  div-disp">
+    <h2 class = "align2 text1"> Customer Details</h2>
+    <table class="table table-borderless table1 align1 ">
+        <tbody>
+       
+        <tr>
+            <td> Name</td>
+            <td>: <%=customer.name%></td>
+        </tr>
+        <tr>
+            <td>Account No.  </td>
+            <td>: <%=customer.customerID%></td>
+        </tr>
+        <tr>
+            <td> Age</td>
+            <td>: <%=customer.age%></td>
+        </tr>
+        <tr>
+            <td> Balance</td>
+            <td>: ₹ <%=customer.accountBalance%></td>
+        </tr>
+        </tbody>
+    </table>
+    <h2 class = "align2 text1">Contact Details</h2>
+    <table class="table table-borderless table1 align1">
+        <tbody>
+        <tr>
+            <td>Email</td>
+            <td>: <%=customer.email%></td>
+        </tr>
+        <tr>
+            <td>Phone No.</td>
+            <td>: 9345534687</td>
+        </tr>
+        
+        </tbody>
+    </table>
+
+    <form class = "align2 " action="/Transfer/:<%=customer.customerID%>" method="get">
+        <input class="btn btn-primary btn-lg" type="submit" value="Transfer">
+    </form>
+</div>
+<%- include('partials/footer'); -%>

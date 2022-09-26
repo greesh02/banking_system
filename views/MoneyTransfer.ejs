@@ -1,0 +1,43 @@
+<%- include('partials/header'); -%>
+
+
+<div class="container div-disp3">
+    <div class="div-disp">
+        <h2 class="text1 align4">Your Account Details</h2>
+        <form action="/Transfer" method="post">
+            <div>
+            <label >Name</label>
+            <input class="input-text" type="text" id="yourName"  value = "<%=curCustomer.name%>" disabled>
+            <input type="hidden" name="yourName" value = "<%=curCustomer.name%>">
+            </div>
+            <div>
+            <label>Account No.</label>
+            <input class="input-text" type="text" id="yourAccountno"  value="<%=curCustomer.customerID%>"  disabled>
+            <input type="hidden" name="yourAccountNo" value = "<%=curCustomer.customerID%>">
+            </div>
+            <div>
+            <label>Account Balance</label>
+            <input class="input-text" type="text" id="yourBalance"  value="₹ <%=curCustomer.accountBalance%>"  disabled>
+            <input type="hidden" name="yourBalance" value = "<%=curCustomer.accountBalance%>">
+            </div>
+
+            <h2 class="text1 align4">Reciever Account Details</h2>
+            <div>
+                <label>Name | Account No.</label>
+                <select name="recieverAccountno">
+                    <% Customers.forEach(function(customer){%>
+                        <option value="<%=customer.customerID%>"><%=customer.name%> | <%=customer.customerID%></option>
+                    <% }) %>
+                </select>
+            </div>
+           
+            <div>
+                <label>Transfer Amount</label>
+                <input class="input-text" type="number" id="transferAmount" name="transferAmount" placeholder="Amount in ₹"required>
+            </div>
+        
+            <input class="btn btn-primary btn-lg align4" type="submit" value="Transfer">
+        </form>
+    </div>
+</div>
+<%- include('partials/footer'); -%>

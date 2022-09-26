@@ -1,0 +1,57 @@
+<%- include('partials/header'); -%>
+<h1 class="align3 text1"> Transaction History</h1>
+
+   
+<div class="container div-disp1">
+    <div><form action="/Transactions" method="post" >
+      <label for="FromAccountno">From  :</label>
+      <select name="FromAccountno" style="width:20%">
+        <% Customers.forEach(function(customer){%>
+            <option value="<%=customer.name%>"><%=customer.name%> | <%=customer.customerID%></option>
+        <% }) %>
+    </select>
+      <label for="ToAccountno">To :</label>
+      <select name="ToAccountno" style="width:20%">
+        <% Customers.forEach(function(customer){%>
+            <option value="<%=customer.name%>"><%=customer.name%> | <%=customer.customerID%></option>
+        <% }) %>
+      </select>
+      <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+  </div>
+    <table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>SNo.</th>
+          <th>Transaction ID</th>
+          <th>From</th>
+          <th>To</th>
+          <th>Time Stamp</th>
+          <th>Amount</th>
+          
+          
+        </tr>
+      </thead>
+
+      <tbody>
+          <% let i = 1;%>
+      <%transactions.forEach(function(t){ %>
+        <tr>
+          <td><%=i++%></td>
+          <td><%=t._id%></td>
+          <td><%=t.fromCustomerName%></td> 
+          <td><%=t.toCustomerName%></td>
+          <td> <%= t.timeStamp%></td>
+          <td> ₹ <%=t.amount%></td>
+          
+          
+
+        </tr>
+      <%});%>
+        
+      </tbody>
+    </table>
+</div>
+
+
+<%- include('partials/footer'); -%>

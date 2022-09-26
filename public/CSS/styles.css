@@ -1,0 +1,98 @@
+body{
+	/* background-color: #deecf9; */
+	
+}
+.footer-padding {
+	padding-bottom: 100px;
+}
+
+.footer {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #0078d4
+}
+
+.footer p {
+	margin-top: 25px;
+	font-size: 12px;
+  color: #1F2833;
+}
+.customer-page-heading{
+	margin-bottom: 80px;
+}
+.button1 {
+	background-color: #71afe5;
+	color: white;
+  }
+.div-disp1 {
+	border-radius: 5px;
+	background-color: #c7e0f4;
+	padding: 20px;
+  }
+.div-disp3 {
+	border-radius: 5px;
+	background-color: #c7e0f4;
+	padding: 20px;
+	width: 80%;
+	text-align: center;
+  }
+/* SingleCustomer */
+.table1{
+	width:250px;
+}
+.align1{
+	margin-left: auto;
+    margin-right: auto;
+}
+.align2{
+	text-align: center;
+	margin-bottom: 50px;
+}
+.align3{
+	margin-bottom: 50px;
+}
+.align4{
+	margin: 30px;
+}
+/* Transaction page */
+.input-text, select {
+	width: 100%;
+	padding: 5px 0px;
+	margin: 0px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+  
+ .input-submit {
+	width: 100%;
+	background-color: #71afe5;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  .input-submit:hover {
+	background-color: #71afe5;
+  }
+  
+  .div-disp {
+	border-radius: 5px;
+	background-color: #c7e0f4;
+	padding: 20px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
+  
+  .text1{
+	  color:#0078d4;
+  }
